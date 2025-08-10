@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "arr-utils"
+version = "0.1.0"
+description = "Utilities to manage *arr applications (Sonarr/Radarr/etc). Includes grab_purger."
+authors = ["Andrew <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "grab_purger" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+httpx = {version = "^0.27.0", extras = ["http2"]}
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+grab-purger = "grab_purger.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
