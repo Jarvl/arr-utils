@@ -8,15 +8,9 @@ Purges downloaded episodes in Sonarr whose most recent grab came from a specific
 Install dependencies, set env vars, and run via Poetry:
 
 ```bash
-poetry install
-```
-
-```bash
-cp grab_purger/.env.example grab_purger/.env
-```
-
-```bash
-poetry run grab-purger
+$ poetry install
+$ cp grab_purger/.env.example grab_purger/.env
+$ poetry run grab-purger
 ```
 
 Dry run mode can be done by setting `DRY_RUN=true` in `.env`
